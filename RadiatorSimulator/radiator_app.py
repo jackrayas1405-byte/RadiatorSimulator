@@ -5,6 +5,14 @@ import matplotlib.pyplot as plt
 import math
 from io import StringIO
 
+import os
+
+st.write("Current directory:")
+st.write(os.getcwd())
+
+st.write("Files in directory:")
+st.write(os.listdir())
+
 # ==========================================================
 # PAGE CONFIG
 # ==========================================================

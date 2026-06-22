@@ -5,13 +5,6 @@ import matplotlib.pyplot as plt
 import math
 from io import StringIO
 
-import os
-
-st.write("Current directory:")
-st.write(os.getcwd())
-
-st.write("Files in directory:")
-st.write(os.listdir())
 
 # ==========================================================
 # PAGE CONFIG
@@ -41,13 +34,15 @@ automotive radiator using energy balance and convection equations.
 # IMAGE
 # ==========================================================
 
-try:
+import os
+
+if os.path.exists("radiator.png"):
     st.image(
         "radiator.png",
         caption="Automotive Radiator",
         width=500
     )
-except:
+else:
     st.info(
         "Optional image not found. Add 'radiator.png' to the project folder."
     )
